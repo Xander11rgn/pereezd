@@ -17,11 +17,11 @@ const burgerMenu = document.querySelector('.header__burger-menu');
 burger.addEventListener('click', function(){
   burgerMenu.classList.toggle('visually-hidden');
 })
-document.onclick = function(e){
+document.addEventListener('click', function(e){
   if ((e.target.className != 'header__burger-menu') && (e.target.className != 'header__burger') && (e.target.className != 'burger')) {
     burgerMenu.classList.add('visually-hidden');
   };
-};
+});
 function checkWindowChange(e) {
   if (e.matches) {
     burgerMenu.classList.add('visually-hidden');
