@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <title>Домашний переезд - Прайс</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="content">
+      <header class="header">
+        <div class="header__logo-block">
+          <div class="logo-block">
+            <a href="index.html" class="logo-block__logo">
+              <img src="img/logo.png" alt="logo" title="Домашний переезд">
+            </a>
+            <h1><a href="index.html" class="logo-block__title">домашний<br>переезд</a></h1>
+          </div>
+        </div>
+
+        <div class="header__contacts-block">
+          <div class="header__phone-mail">
+            <div class="header__phone"><a href="tel:+79505664666">8 (950) 566-46-66</a></div>
+            <div class="header__mail"><a href="mailto:gruz11reg@yandex.ru">gruz11reg@yandex.ru</a></div>
+          </div>
+          <div class="header__reply-button reply-button">Обратная связь</div>
+        </div>
+
+        <nav class="header__nav">
+          <ul class="header__nav-block">
+
+            <li class="header__nav-item">
+              <a href="about.html">О компании</a>
+              <span class="header__list-arrow" data-list="about">
+                <img src="img/list-arrow.svg" alt="">
+              </span>
+            </li>
+
+            <li class="header__nav-item">
+              <a href="services.html">Услуги</a>
+              <span class="header__list-arrow" data-list="services">
+                <img src="img/list-arrow.svg" alt="">
+              </span>
+            </li>
+
+            <li class="header__nav-item header__nav-item_hide"><a href="calculator.html">Калькулятор</a></li>
+            <li class="header__nav-item header__nav-item_hide"><a href="price.html">Прайс</a></li>
+            <li class="header__nav-item header__nav-item_hide"><a href="contacts.html">Контакты</a></li>
+          </ul>
+
+          <ul class="header__list header__about-list visually-hidden" data-list="about">
+            <li class="header__list-item"><a href="requisites.html">Реквизиты</a></li>
+            <li class="header__list-item"><a href="documents.html">Шаблоны договора</a></li>
+            <li class="header__list-item"><a>Политика конфиденциальности</a></li>
+          </ul>
+
+          <ul class="header__list header__services-list visually-hidden" data-list="services">
+            <li class="header__list-item"><a href="home-relocation.html">Домашние переезды</a></li>
+            <li class="header__list-item"><a>Офисные переезды</a></li>
+            <li class="header__list-item"><a>Дачные переезды</a></li>
+            <li class="header__list-item"><a>Грузоперевозки по России</a></li>
+          </ul>
+
+          <div class="header__burger"><span class="burger"></span></div>
+          <ul class="header__burger-menu visually-hidden">
+            <li class="header__burger-item"><a href="calculator.html">Калькулятор</a></li>
+            <li class="header__burger-item"><a href="price.html">Прайс</a></li>
+            <li class="header__burger-item"><a href="contacts.html">Контакты</a></li>
+          </ul>
+        </nav>
+      </header>
+
+
+      <main class="main">
+        <section class="price-block">
+          <div class="container">
+            <div class="path">
+              <div class="path__item"><a href="index.html">Главная</a></div>
+              <div class="path__item path__item_selected">Прайс</div>
+            </div>
+
+            <div class="price">
+              <h2 class="price__title">прайс</h2>
+              <div class="price__toolbar">
+                <div class="price__toolbar-item price__toolbar-item_selected" data-tab="1">1,5 тонны</div>
+                <div class="price__toolbar-item" data-tab="2">3 тонны</div>
+                <div class="price__toolbar-item" data-tab="3">5 тонн</div>
+                <div class="price__toolbar-item" data-tab="4">10 тонн</div>
+                <div class="price__toolbar-item" data-tab="5">20 тонн</div>
+              </div>
+
+              <div class="price__panel-wrapper">
+                <div class="price__panel-block price__panel-block_active" data-tab="1">
+                  <div class="price__panel-title">Данные машины компактные и маневренные, не требуют больших подъездных
+                    путей. Идеально подходят для «перевозки» 1-к. квартиры.</div>
+                  <div class="price__panel">
+                    <div class="price__panel-pic">
+                      <img src="img/price-truck-1.5.png" alt="Грузовик 1.5 тонны" title="Грузовик 1.5 тонны">
+                    </div>
+                    <div class="price__panel-parameters">
+                      <div class="price__parameters">
+                        <div class="price__parameters-left">
+                          <div class="price__parameters-caption">Марки автомобилей</div>
+                          <div class="price__parameters-item">
+                            <div class="price__parameters-description">− ГАЗель</div>
+                            <div class="price__parameters-description">− Isuzu</div>
+                            <div class="price__parameters-description">− Kia</div>
+                            <div class="price__parameters-description">− Mitsubishi</div>
+                          </div>
+                        </div>
+                        <div class="price__parameters-right">
+                          <div class="price__parameters-item">
+                            <div class="price__parameters-caption">Длина кузова</div>
+                            <div class="price__parameters-description">от 3 м. до 5 м.</div>
+                          </div>
+                          <div class="price__parameters-item">
+                            <div class="price__parameters-caption">Объем кузова</div>
+                            <div class="price__parameters-description">от 9 до 20 куб. м.</div>
+                          </div>
+                          <div class="price__parameters-item">
+                            <div class="price__parameters-caption">Грузоподъемность</div>
+                            <div class="price__parameters-description">от 1.5 до 2 т.</div>
+                          </div>
+                          <div class="price__parameters-item">
+                            <div class="price__parameters-caption">Цена за км</div>
+                            <div class="price__parameters-description">15 руб./км</div>
+                          </div>
+                          
+                        </div>
+                      </div>
+                      <div class="price__reply-button request-button">Оставить заявку</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="price__panel-block visually-hidden" data-tab="2">
+                  <div class="price__panel-title">Данные машины компактные и маневренные, не требуют больших подъездных
+                    путей. Идеально подходят для «перевозки» 2-к. квартиры.</div>
+                  <div class="price__panel">
+                    <div class="price__panel-pic">
+                      <img src="img/price-truck-3.png" alt="Грузовик 3 тонны" title="Грузовик 3 тонны">
+                    </div>
+                    <div class="price__panel-parameters">
+                      <div class="price__parameters">
+                        <div class="price__parameters-left">
+                          <div class="price__parameters-caption">Марки автомобилей</div>
+                          <div class="price__parameters-item">
+                            <div class="price__parameters-description">− ГАЗ «Бычок»</div>
+                            <div class="price__parameters-description">− Валдай</div>
+                            <div class="price__parameters-description">− Isuzu</div>
+                            <div class="price__parameters-description">− Hino</div>
+                            <div class="price__parameters-description">− Mazda</div>
+                          </div>
+                        </div>
+                        <div class="price__parameters-right">
+                          <div class="price__parameters-item">
+                            <div class="price__parameters-caption">Длина кузова</div>
+                            <div class="price__parameters-description">от 4.5 м. до 6.5 м.</div>
+                          </div>
+                          <div class="price__parameters-item">
+                            <div class="price__parameters-caption">Объем кузова</div>
+                            <div class="price__parameters-description">от 18 до 30 куб. м.</div>
+                          </div>
+                          <div class="price__parameters-item">
+                            <div class="price__parameters-caption">Грузоподъемность</div>
+                            <div class="price__parameters-description">от 3 до 4 т.</div>
+                          </div>
+                          <div class="price__parameters-item">
+                            <div class="price__parameters-caption">Цена за км</div>
+                            <div class="price__parameters-description">17 руб./км</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="price__reply-button request-button">Оставить заявку</div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="price__panel-block visually-hidden" data-tab="3">
+                  
+                </div>
+
+
+                <div class="price__panel-block visually-hidden" data-tab="4">
+                  <div class="price__panel-title">Данные машины компактные и маневренные, не требуют больших подъездных
+                    путей. Идеально подходят для «перевозки» 2-к. квартиры.</div>
+                  <div class="price__panel">
+                    <div class="price__panel-pic">
+                      <img src="img/price-truck-10.png" alt="Грузовик 10 тонн" title="Грузовик 10 тонн">
+                    </div>
+                    <div class="price__panel-parameters">
+                      <div class="price__parameters">
+                        <div class="price__parameters-left">
+                          <div class="price__parameters-caption">Марки автомобилей</div>
+                          <div class="price__parameters-item">
+                            <div class="price__parameters-description">− Hino</div>
+                            <div class="price__parameters-description">− Volvo</div>
+                            <div class="price__parameters-description">− КамАЗ</div>
+                            <div class="price__parameters-description">− Isuzu</div>
+                          </div>
+                        </div>
+                        <div class="price__parameters-right">
+                          <div class="price__parameters-item">
+                            <div class="price__parameters-caption">Длина кузова</div>
+                            <div class="price__parameters-description">от 4.5 м. до 6.5 м.</div>
+                          </div>
+                          <div class="price__parameters-item">
+                            <div class="price__parameters-caption">Объем кузова</div>
+                            <div class="price__parameters-description">от 18 до 30 куб. м.</div>
+                          </div>
+                          <div class="price__parameters-item">
+                            <div class="price__parameters-caption">Грузоподъемность</div>
+                            <div class="price__parameters-description">от 3 до 4 т.</div>
+                          </div>
+                          <div class="price__parameters-item">
+                            <div class="price__parameters-caption">Цена за км</div>
+                            <div class="price__parameters-description">17 руб./км</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="price__reply-button request-button">Оставить заявку</div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="price__panel-block visually-hidden" data-tab="5">
+                  <div class="price__panel-title">Данные машины компактные и маневренные, не требуют больших подъездных
+                    путей. Идеально подходят для «перевозки» 2-к. квартиры.</div>
+                  <div class="price__panel">
+                    <div class="price__panel-pic">
+                      <img src="img/price-truck-20.png" alt="Грузовик 20 тонн" title="Грузовик 20 тонн">
+                    </div>
+                    <div class="price__panel-parameters">
+                      <div class="price__parameters">
+                        <div class="price__parameters-left">
+                          <div class="price__parameters-caption">Марки автомобилей</div>
+                          <div class="price__parameters-item">
+                            <div class="price__parameters-description">− Hino</div>
+                            <div class="price__parameters-description">− Volvo</div>
+                            <div class="price__parameters-description">− КамАЗ</div>
+                            <div class="price__parameters-description">− Isuzu</div>
+                          </div>
+                        </div>
+                        <div class="price__parameters-right">
+                          <div class="price__parameters-item">
+                            <div class="price__parameters-caption">Длина кузова</div>
+                            <div class="price__parameters-description">от 4.5 м. до 6.5 м.</div>
+                          </div>
+                          <div class="price__parameters-item">
+                            <div class="price__parameters-caption">Объем кузова</div>
+                            <div class="price__parameters-description">от 18 до 30 куб. м.</div>
+                          </div>
+                          <div class="price__parameters-item">
+                            <div class="price__parameters-caption">Грузоподъемность</div>
+                            <div class="price__parameters-description">от 3 до 4 т.</div>
+                          </div>
+                          <div class="price__parameters-item">
+                            <div class="price__parameters-caption">Цена за км</div>
+                            <div class="price__parameters-description">17 руб./км</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="price__reply-button request-button">Оставить заявку</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer class="footer-block">
+      <div class="container">
+        <div class="footer">
+          <div class="footer__top">
+            <div class="footer__contacts">
+              <div class="footer__office">
+                <div class="footer__office-address">Офис: 167000, г. Сыктывкар, ул. Огородная, д. 6, оф. 2</div>
+                <div class="footer__office-schedule">График работы: с 8:00 до 20:00</div>
+              </div>
+              <div class="footer__communication">
+                <div class="footer__phone">
+                  Тел: <a href="tel:+79505664666">8 (950) 566-46-66</a>, <a href="tel:+79635573577">8 (963)
+                    557-35-77</a>
+                </div>
+                <div class="footer__mail">
+                  E-mail: <a href="mailto:gruz11reg@yandex.ru">gruz11reg@yandex.ru</a>
+                </div>
+              </div>
+            </div>
+            <div class="footer__reply-button reply-button">Обратная связь</div>
+          </div>
+          <hr class="footer__hr">
+          <div class="footer__bottom">
+            <div class="footer__copyright">© 2017 <a href="index.html">Домашний переезд</a></div>
+            <div class="footer__developed-by">Разработка: <a href="https://it-rkomi.ru/">«Информационные технологии»</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="popup reply-form visually-hidden">
+      <div class="popup__form">
+        <div class="popup__form-header">
+          <div class="popup__form-title">Форма обратной связи</div>
+          <div class="popup__form-close reply-close">Закрыть</div>
+        </div>
+        <div class="popup__form-body">
+          <div class="popup__form-inputs">
+
+            <div class="popup__input-item">
+              <div class="popup__input-label">Ваше имя</div>
+              <div class="popup__input">
+                <input type="text" name="reply-name" id="reply-name" class="reply-name">
+              </div>
+            </div>
+
+            <div class="popup__input-item">
+              <div class="popup__input-label">Телефон</div>
+              <div class="popup__input">
+                <input type="text" name="reply-phone" id="reply-phone" class="reply-phone">
+              </div>
+            </div>
+
+          </div>
+          <div class="popup__form-agreement">
+            <div class="popup__agree-checkbox">
+              <input type="checkbox" name="agree-reply" id="agree-reply">
+              <label for="agree-reply"></label>
+            </div>
+            <div class="popup__agree-text">Согласен на обработку персональных данных</div>
+          </div>
+          <div class="popup__form-button">Отправить</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup request-form visually-hidden">
+      <div class="popup__form">
+        <div class="popup__form-header">
+          <div class="popup__form-title">Оставить заявку</div>
+          <div class="popup__form-close request-close">Закрыть</div>
+        </div>
+        <div class="popup__form-body">
+          <div class="popup__form-inputs">
+
+            <div class="popup__input-item">
+              <div class="popup__input-label">Ваше имя</div>
+              <div class="popup__input">
+                <input type="text" name="request-name" id="request-name" class="request-name">
+              </div>
+            </div>
+
+            <div class="popup__input-item">
+              <div class="popup__input-label">Телефон</div>
+              <div class="popup__input">
+                <input type="text" name="request-phone" id="request-phone" class="request-phone">
+              </div>
+            </div>
+
+            <div class="popup__input-item">
+              <div class="popup__input-label">Краткая информация</div>
+              <div class="popup__input">
+                <textarea name="info" id="info" class="info" rows="3"></textarea>
+              </div>
+            </div>
+
+          </div>
+          <div class="popup__form-agreement">
+            <div class="popup__agree-checkbox">
+              <input type="checkbox" name="agree-request" id="agree-request">
+              <label for="agree-request"></label>
+            </div>
+            <div class="popup__agree-text">Согласен на обработку персональных данных</div>
+          </div>
+          <div class="popup__form-button">Отправить</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <title>Домашний переезд - Калькулятор</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="content">
+      <header class="header">
+        <div class="header__logo-block">
+          <div class="logo-block">
+            <a href="index.html" class="logo-block__logo">
+              <img src="img/logo.png" alt="logo" title="Домашний переезд">
+            </a>
+            <h1><a href="index.html" class="logo-block__title">домашний<br>переезд</a></h1>
+          </div>
+        </div>
+
+        <div class="header__contacts-block">
+          <div class="header__phone-mail">
+            <div class="header__phone"><a href="tel:+79505664666">8 (950) 566-46-66</a></div>
+            <div class="header__mail"><a href="mailto:gruz11reg@yandex.ru">gruz11reg@yandex.ru</a></div>
+          </div>
+          <div class="header__reply-button reply-button">Обратная связь</div>
+        </div>
+
+        <nav class="header__nav">
+          <ul class="header__nav-block">
+
+            <li class="header__nav-item">
+              <a href="about.html">О компании</a>
+              <span class="header__list-arrow" data-list="about">
+                <img src="img/list-arrow.svg" alt="">
+              </span>
+            </li>
+
+            <li class="header__nav-item">
+              <a href="services.html">Услуги</a>
+              <span class="header__list-arrow" data-list="services">
+                <img src="img/list-arrow.svg" alt="">
+              </span>
+            </li>
+
+            <li class="header__nav-item header__nav-item_hide"><a href="calculator.html">Калькулятор</a></li>
+            <li class="header__nav-item header__nav-item_hide"><a href="price.html">Прайс</a></li>
+            <li class="header__nav-item header__nav-item_hide"><a href="contacts.html">Контакты</a></li>
+          </ul>
+
+          <ul class="header__list header__about-list visually-hidden" data-list="about">
+            <li class="header__list-item"><a href="requisites.html">Реквизиты</a></li>
+            <li class="header__list-item"><a href="documents.html">Шаблоны договора</a></li>
+            <li class="header__list-item"><a>Политика конфиденциальности</a></li>
+          </ul>
+
+          <ul class="header__list header__services-list visually-hidden" data-list="services">
+            <li class="header__list-item"><a href="home-relocation.html">Домашние переезды</a></li>
+            <li class="header__list-item"><a>Офисные переезды</a></li>
+            <li class="header__list-item"><a>Дачные переезды</a></li>
+            <li class="header__list-item"><a>Грузоперевозки по России</a></li>
+          </ul>
+
+          <div class="header__burger"><span class="burger"></span></div>
+          <ul class="header__burger-menu visually-hidden">
+            <li class="header__burger-item"><a href="calculator.html">Калькулятор</a></li>
+            <li class="header__burger-item"><a href="price.html">Прайс</a></li>
+            <li class="header__burger-item"><a href="contacts.html">Контакты</a></li>
+          </ul>
+        </nav>
+      </header>
+
+
+      <main class="main">
+        <section class="calculator-block">
+          <div class="container">
+            <div class="path">
+              <div class="path__item"><a href="index.html">Главная</a></div>
+              <div class="path__item path__item_selected">Калькулятор</div>
+            </div>
+
+            <div class="calculator">
+              <h2 class="calculator__title">калькулятор</h2>
+              <div class="calculator__inputs">
+                <div class="calculator__input-item">
+                  <div class="calculator__input-label">Откуда</div>
+                  <div class="calculator__input">
+                    <input type="text" name="from" id="from" class="from" value="Сыктывкар">
+                  </div>
+                </div>
+                <div class="calculator__input-item">
+                  <div class="calculator__input-label">Куда</div>
+                  <div class="calculator__input">
+                    <input type="text" name="to" id="to" class="to" value="Москва">
+                  </div>
+                </div>
+                <div class="calculator__input-item">
+                  <div class="calculator__input-label">Вес груза (тн)</div>
+                  <div class="calculator__input">
+                    <input type="text" name="weight" id="weight" class="weight" value="1,5 т">
+                    <img src="img/list-arrow-dark.svg" alt="" class="calculator__weight-list-arrow">
+                    <div class="calculator__weight-list">
+                      <div class="calculator__weight-list-item">1,5 т</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="calculator__map">
+                <!-- <img src="img/map-calc.jpg" alt="Маршрут переезда" alt="Маршрут переезда"> -->
+                
+                <div style="position:relative;overflow:hidden;">
+                  <a href="https://yandex.ru/maps?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Яндекс.Карты</a>
+                  <a href="https://yandex.ru/maps/?ll=44.362243%2C58.726180&mode=routes&rtext=61.668797%2C50.836497~55.755819%2C37.617644&rtt=auto&ruri=ymapsbm1%3A%2F%2Fgeo%3Fll%3D50.836%252C61.669%26spn%3D0.277%252C0.239%26text%3D%25D0%25A0%25D0%25BE%25D1%2581%25D1%2581%25D0%25B8%25D1%258F%252C%2520%25D0%25A0%25D0%25B5%25D1%2581%25D0%25BF%25D1%2583%25D0%25B1%25D0%25BB%25D0%25B8%25D0%25BA%25D0%25B0%2520%25D0%259A%25D0%25BE%25D0%25BC%25D0%25B8%252C%2520%25D0%25A1%25D1%258B%25D0%25BA%25D1%2582%25D1%258B%25D0%25B2%25D0%25BA%25D0%25B0%25D1%2580~ymapsbm1%3A%2F%2Fgeo%3Fll%3D37.618%252C55.756%26spn%3D0.642%252C0.466%26text%3D%25D0%25A0%25D0%25BE%25D1%2581%25D1%2581%25D0%25B8%25D1%258F%252C%2520%25D0%259C%25D0%25BE%25D1%2581%25D0%25BA%25D0%25B2%25D0%25B0&utm_medium=mapframe&utm_source=maps&z=6" style="color:#eee;font-size:12px;position:absolute;top:14px;">Яндекс.Карты</a>
+                  <iframe src="https://yandex.ru/map-widget/v1/-/CCU45EE2TD" width="560" height="400" allowfullscreen style="position:relative;border:0;width:100%;"></iframe>
+                </div>
+
+              </div>
+              <div class="calculator__cost-block">
+                <div class="calculator__cost-title">Примерная стоимость:</div>
+                <div class="calculator__cost"><span class="cost">19 500</span> руб.</div>
+              </div>
+              <div class="calculator__reply-button request-button">Оставить заявку</div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer class="footer-block">
+      <div class="container">
+        <div class="footer">
+          <div class="footer__top">
+            <div class="footer__contacts">
+              <div class="footer__office">
+                <div class="footer__office-address">Офис: 167000, г. Сыктывкар, ул. Огородная, д. 6, оф. 2</div>
+                <div class="footer__office-schedule">График работы: с 8:00 до 20:00</div>
+              </div>
+              <div class="footer__communication">
+                <div class="footer__phone">
+                  Тел: <a href="tel:+79505664666">8 (950) 566-46-66</a>, <a href="tel:+79635573577">8 (963)
+                    557-35-77</a>
+                </div>
+                <div class="footer__mail">
+                  E-mail: <a href="mailto:gruz11reg@yandex.ru">gruz11reg@yandex.ru</a>
+                </div>
+              </div>
+            </div>
+            <div class="footer__reply-button reply-button">Обратная связь</div>
+          </div>
+          <hr class="footer__hr">
+          <div class="footer__bottom">
+            <div class="footer__copyright">© 2017 <a href="index.html">Домашний переезд</a></div>
+            <div class="footer__developed-by">Разработка: <a href="https://it-rkomi.ru/">«Информационные технологии»</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <div class="popup reply-form visually-hidden">
+      <div class="popup__form">
+        <div class="popup__form-header">
+          <div class="popup__form-title">Форма обратной связи</div>
+          <div class="popup__form-close reply-close">Закрыть</div>
+        </div>
+        <div class="popup__form-body">
+          <div class="popup__form-inputs">
+
+            <div class="popup__input-item">
+              <div class="popup__input-label">Ваше имя</div>
+              <div class="popup__input">
+                <input type="text" name="reply-name" id="reply-name" class="reply-name">
+              </div>
+            </div>
+
+            <div class="popup__input-item">
+              <div class="popup__input-label">Телефон</div>
+              <div class="popup__input">
+                <input type="text" name="reply-phone" id="reply-phone" class="reply-phone">
+              </div>
+            </div>
+
+          </div>
+          <div class="popup__form-agreement">
+            <div class="popup__agree-checkbox">
+              <input type="checkbox" name="agree-reply" id="agree-reply">
+              <label for="agree-reply"></label>
+            </div>
+            <div class="popup__agree-text">Согласен на обработку персональных данных</div>
+          </div>
+          <div class="popup__form-button">Отправить</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup request-form visually-hidden">
+      <div class="popup__form">
+        <div class="popup__form-header">
+          <div class="popup__form-title">Оставить заявку</div>
+          <div class="popup__form-close request-close">Закрыть</div>
+        </div>
+        <div class="popup__form-body">
+          <div class="popup__form-inputs">
+
+            <div class="popup__input-item">
+              <div class="popup__input-label">Ваше имя</div>
+              <div class="popup__input">
+                <input type="text" name="request-name" id="request-name" class="request-name">
+              </div>
+            </div>
+
+            <div class="popup__input-item">
+              <div class="popup__input-label">Телефон</div>
+              <div class="popup__input">
+                <input type="text" name="request-phone" id="request-phone" class="request-phone">
+              </div>
+            </div>
+
+            <div class="popup__input-item">
+              <div class="popup__input-label">Краткая информация</div>
+              <div class="popup__input">
+                <textarea name="info" id="info" class="info" rows="3"></textarea>
+              </div>
+            </div>
+
+          </div>
+          <div class="popup__form-agreement">
+            <div class="popup__agree-checkbox">
+              <input type="checkbox" name="agree-request" id="agree-request">
+              <label for="agree-request"></label>
+            </div>
+            <div class="popup__agree-text">Согласен на обработку персональных данных</div>
+          </div>
+          <div class="popup__form-button">Отправить</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <script src="jquery-3.5.1.min"></script>
+  <script src="js/main.js"></script>
+  
+
+</body>
+
+</html>
