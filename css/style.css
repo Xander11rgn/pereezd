@@ -2691,6 +2691,12 @@ a {
   }
 }
 
+@media (max-height: 500px) {
+  .popup__form {
+    padding: 45px 20px 10px;
+  }
+}
+
 .popup__form-header {
   position: absolute;
   top: 0;
@@ -2801,8 +2807,20 @@ a {
   width: 100%;
 }
 
+@media (max-height: 500px) {
+  .popup__form-inputs {
+    margin-bottom: 10px;
+  }
+}
+
 .popup__input-item:not(:last-child) {
   margin-bottom: 20px;
+}
+
+@media (max-height: 500px) {
+  .popup__input-item:not(:last-child) {
+    margin-bottom: 0;
+  }
 }
 
 .popup__input-label {
@@ -2817,6 +2835,12 @@ a {
   width: 100%;
 }
 
+@media (max-height: 500px) {
+  .popup__input input {
+    padding: 4px 10px 4px 15px;
+  }
+}
+
 .popup__form-agreement {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2829,6 +2853,12 @@ a {
       -ms-flex-align: start;
           align-items: flex-start;
   margin-bottom: 30px;
+}
+
+@media (max-height: 500px) {
+  .popup__form-agreement {
+    margin-bottom: 10px;
+  }
 }
 
 .popup__agree-checkbox {
@@ -2904,6 +2934,12 @@ a {
           user-select: none;
 }
 
+@media (max-height: 500px) {
+  .popup__form-button {
+    padding: 5px 40px;
+  }
+}
+
 .popup__form-button:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
@@ -2911,4 +2947,10 @@ a {
 
 .info {
   width: 100%;
+}
+
+@media (max-height: 500px) {
+  .info {
+    height: 30px;
+  }
 }
