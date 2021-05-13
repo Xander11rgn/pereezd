@@ -1,3 +1,8 @@
+if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = Array.prototype.forEach;
+}
+
+
 // object-fit for ie11
 function ibg(){
   let ibg = document.querySelectorAll(".ibg");
@@ -36,60 +41,79 @@ checkWindowChange(mediaQuery);
 // header lists
 const listArrows = document.querySelectorAll('.header__list-arrow');
 const lists = document.querySelectorAll('.header__list');
-listArrows.forEach(arrowEl => arrowEl.addEventListener('click', function(){
-  const dataList = arrowEl.dataset.list;
-  lists.forEach(listEl => {
-    if (listEl.dataset.list == dataList) {
-      listEl.classList.toggle('visually-hidden');
-      arrowEl.classList.toggle('list-active');
-    }
-    else {
-      listEl.classList.add('visually-hidden');
-    }
+listArrows.forEach(function(arrow){
+  arrow.addEventListener('click', function(){
+    const dataList = arrow.dataset.list;
+    lists.forEach(function(list){
+      if (list.dataset.list == dataList) {
+        list.classList.toggle('visually-hidden');
+        arrow.classList.toggle('list-active');
+      }
+      else {
+        list.classList.add('visually-hidden');
+      }
+    });
   });
-}))
+});
+
 document.onclick = function(e){
   if (!e.target.parentNode.hasAttribute("data-list") && !e.target.hasAttribute("data-list")) {
-    lists.forEach(el => el.classList.add('visually-hidden'));
-    try {
-      document.querySelector('.list-active').classList.remove('list-active');
-    }
-    catch (e) {}
+    lists.forEach(function(list){
+      list.classList.add('visually-hidden');
+      try {
+        document.querySelector('.list-active').classList.remove('list-active');
+      }
+      catch (e) {}
+    });
   };
 };
-
 
 
 //popup forms
 const replyButtons = document.querySelectorAll('.reply-button');
 const replyForm = document.querySelector('.reply-form')
 const replyClose = document.querySelector('.reply-close')
-
 const requestButtons = document.querySelectorAll('.request-button');
 const requestForm = document.querySelector('.request-form')
 const requestClose = document.querySelector('.request-close')
+const requestLink = document.querySelector('.request-link')
 
-replyButtons.forEach(el => el.addEventListener('click', function(){
+function replyFormShow() {
   replyForm.classList.remove('visually-hidden');
   document.querySelector('body').classList.add('body-lock');
-}))
+}
+function requestFormShow() {
+  requestForm.classList.remove('visually-hidden');
+  document.querySelector('body').classList.add('body-lock');
+}
+
+replyButtons.forEach(function(button){
+  button.addEventListener('click', replyFormShow);
+});
 replyClose.addEventListener('click', function(){
   replyForm.classList.add('visually-hidden');
   document.querySelector('body').classList.remove('body-lock');
-})
+});
 
-requestButtons.forEach(el => el.addEventListener('click', function(){
-  requestForm.classList.remove('visually-hidden');
-  document.querySelector('body').classList.add('body-lock');
-}))
-requestClose.addEventListener('click', function(){
-  requestForm.classList.add('visually-hidden');
-  document.querySelector('body').classList.remove('body-lock');
-})
+try{
+  requestButtons.forEach(function(button){
+    button.addEventListener('click', requestFormShow);
+  });
+  requestClose.addEventListener('click', function(){
+    requestForm.classList.add('visually-hidden');
+    document.querySelector('body').classList.remove('body-lock');
+  })
+}
+catch (e){}
+
+try {
+  requestLink.addEventListener('click', requestFormShow);
+}
+catch (e){}
 
 
 
-//weight list
+// //weight list
 try{
   const weightInput = document.querySelector('.weight');
   const weightList = document.querySelector('.calculator__weight-list');
@@ -97,10 +121,13 @@ try{
   weightInput.addEventListener('click', function(){
     weightList.style.display = "flex";
   });
-  weightListItems.forEach(el => el.addEventListener('mousedown', function(){
-    weightInput.value = el.innerHTML;
-    weightList.style.display = "none";
-  }));
+
+  weightListItems.forEach(function(item){
+    item.addEventListener('mousedown', function(){
+      weightInput.value = item.innerHTML;
+      weightList.style.display = "none";
+    });
+  });
   weightInput.addEventListener('blur', function(){
     weightList.style.display = "none";
   });
@@ -110,7 +137,7 @@ catch (e){}
 
 
 
-//price adaptive height
+// //price adaptive height
 function heightAdapt(){
   try{
     const panelWrapper = document.querySelector('.price__panel-wrapper');
@@ -120,29 +147,32 @@ function heightAdapt(){
   catch (e) {}
 }
 heightAdapt();
-window.addEventListener(`resize`, heightAdapt);
+window.addEventListener('resize', heightAdapt);
 
 
 
 
-//price tabs
+// //price tabs
 try{
   const tabs = document.querySelectorAll('.price__toolbar-item');
-  tabs.forEach(el => el.addEventListener('click', function(){
-    const dataTab = el.dataset.tab;
-    const prevBlock = document.querySelector('.price__panel-block_active');
-    const newBlock = document.querySelector('.price__panel-block[data-tab="' + dataTab + '"]');
-    const prevTab = document.querySelector('.price__toolbar-item_selected');
-    const newTab = document.querySelector('.price__toolbar-item[data-tab="' + dataTab + '"]');
-    prevBlock.classList.add('visually-hidden');
-    prevBlock.classList.remove('price__panel-block_active');
-    newBlock.classList.remove('visually-hidden');
-    newBlock.classList.add('price__panel-block_active');
-    heightAdapt();
-    prevTab.classList.remove('price__toolbar-item_selected');
-    newTab.classList.add('price__toolbar-item_selected');
-    
-  }))
+
+  tabs.forEach(function(tab){
+    tab.addEventListener('click', function(){
+      const dataTab = tab.dataset.tab;
+      const prevBlock = document.querySelector('.price__panel-block_active');
+      const newBlock = document.querySelector('.price__panel-block[data-tab="' + dataTab + '"]');
+      const prevTab = document.querySelector('.price__toolbar-item_selected');
+      const newTab = document.querySelector('.price__toolbar-item[data-tab="' + dataTab + '"]');
+      prevBlock.classList.add('visually-hidden');
+      prevBlock.classList.remove('price__panel-block_active');
+      newBlock.classList.remove('visually-hidden');
+      newBlock.classList.add('price__panel-block_active');
+      heightAdapt();
+      prevTab.classList.remove('price__toolbar-item_selected');
+      newTab.classList.add('price__toolbar-item_selected');
+      
+    });
+  });
 }
 catch (e) {}
 
