@@ -1863,6 +1863,9 @@ a {
       padding: 80px 30px 50px;
       width: 290px;
     }
+    @media(max-height:500px) {
+      padding: 45px 20px 10px;
+    }
   }
 
   &__form-header {
@@ -1936,11 +1939,17 @@ a {
   &__form-inputs {
     margin-bottom: 20px;
     width: 100%;
+    @media(max-height:500px) {
+      margin-bottom: 10px;
+    }
   }
 
   &__input-item {
     &:not(:last-child) {
       margin-bottom: 20px;
+      @media(max-height:500px) {
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -1955,6 +1964,9 @@ a {
   &__input {
     & input {
       width: 100%;
+      @media(max-height:500px) {
+        padding: 4px 10px 4px 15px;
+      }
     }
   }
 
@@ -1963,6 +1975,9 @@ a {
     flex-direction: row;
     align-items: flex-start;
     margin-bottom: 30px;
+    @media(max-height:500px) {
+      margin-bottom: 10px;
+    }
   }
 
   &__agree-checkbox {
@@ -2024,6 +2039,9 @@ a {
     width: 150px;
     cursor: pointer;
     user-select: none;
+    @media(max-height:500px) {
+      padding: 5px 40px;
+    }
     &:hover {
       transform: scale(1.1);
     }
@@ -2031,6 +2049,7 @@ a {
 }
 .info {
   width: 100%;
+  @media(max-height:500px) {
+    height: 30px;
+  }
 }
-
-
