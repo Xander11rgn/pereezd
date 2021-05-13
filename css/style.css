@@ -761,8 +761,12 @@ a {
   position: absolute;
   bottom: 100px;
   right: calc(100vw - 80%);
-  font-size: calc( 20px + (30 - 20) * (100vw - 320px) / (1920 - 320));
-  line-height: calc( 1.467px + (1.467 - 1.467) * (100vw - 320px) / (1920 - 320));
+  font-size: calc(
+ 20px + (30 - 20) * (100vw - 320px) / (1920 -
+ 320));
+  line-height: calc(
+ 1.467px + (1.467 - 1.467) * (100vw - 320px) / (1920 -
+ 320));
   font-weight: 800;
   font-family: "Open Sans", sans-serif;
   color: white;
@@ -1012,13 +1016,13 @@ a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-top: 130px;
+    margin-top: 180px;
   }
 }
 
 @media (max-width: 745px) {
   .services__second-row {
-    margin-top: 30px;
+    margin-top: 60px;
   }
 }
 
